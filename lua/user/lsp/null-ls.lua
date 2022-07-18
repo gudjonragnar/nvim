@@ -33,7 +33,7 @@ local unwrap = {
       -- sources have access to a params object
       -- containing info about the current file and editor state
       for i, line in ipairs(params.content) do
-        local col, end_col = line:find "unwrap()"
+        local col, end_col = line:find "unwrap%(%)"
         if col and end_col then
           -- null-ls fills in undefined positions
           -- and converts source diagnostics into the required format
